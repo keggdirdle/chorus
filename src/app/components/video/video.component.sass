@@ -1,0 +1,43 @@
+@import "../../../variables.sass"
+    
+h1
+    font-size: 2.2vw
+    font-family: Arial, Helvetica, sans-serif
+.video
+    margin: auto
+    width: 35vw
+    height: 20vw
+    &.hide
+        visibility: hidden
+    @media (min-width: $tablet-breakpoint)
+        transform: none
+        position: unset
+        top: unset
+        position: relative
+        top: -50px
+    video
+        width: 32vw
+        position: relative
+        top: -50px
+        z-index: -1
+        box-shadow: 2px 2px 2px grey
+        border-radius: 5px
+        @media (min-width: $tablet-breakpoint)
+            transform: none
+            position: unset
+            top: unset
+    .video-overlay-play-button
+        position: relative
+        top: 50%
+        transform: perspective(1px) translateY(-50%)
+        margin: auto
+        height: 60px
+        background-color: #072889
+        width: 60px
+        opacity: 0.6
+        border-radius: 5px
+        @media (min-width: $tablet-breakpoint)
+            height: 30%
+            transform: none
+            position: relative
+            top: 60%

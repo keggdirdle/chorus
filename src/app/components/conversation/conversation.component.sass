@@ -1,0 +1,55 @@
+@import "../../../variables.sass"
+    
+.utterance:after
+    content: ""
+    display: table
+    clear: both
+.conversation
+    position: relative
+    text-align: left
+    font: 1.5vw Arial
+    color: #474747
+    @media (max-width: $mobile-breakpoint)
+        font: 10px Arial
+    .error
+        text-align: center
+        font: 1.5vw Arial
+        color: #dd0000
+        padding: 5vw
+.col
+    float: left
+.indicator
+    width: 4vw
+    /*position: absolute*/
+    bottom: 0px
+    left: 0px
+    visibility: hidden
+    text-align: right
+.active 
+    visibility: visible
+.comment
+    width: 71vw
+    border-radius: 20px
+    background-color: #f7f7f7
+    margin: .5vw 0vw 0vw 3vw
+    padding: 1vw
+    @media (min-width: $tablet-breakpoint)
+        width: 85%
+    .speaker 
+        background: none
+        padding: 0 0 0 1vw
+.dot
+    height: 1.8vw
+    width: 1.8vw
+    border: .1vw solid #EE6EFF
+    border-radius: 50%
+    display: inline-block
+    margin-top: 2vw
+    &.Cust
+        border: .1vw solid #EE6EFF
+        @media (max-width: $mobile-breakpoint)
+            background-color: #EE6EFF
+    &.Rep
+        border: .1vw solid #00A7D1
+        @media (max-width: $mobile-breakpoint)
+            background-color: #00A7D1

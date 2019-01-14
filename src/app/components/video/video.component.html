@@ -1,0 +1,15 @@
+<h1>Moment from meeting with Two Pillars</h1>
+<div class="video hide">
+    <span class="arrow" (click)="playVideo()">
+        <svg class="video-overlay-play-button" 
+            viewBox="0 0 200 200" 
+            alt="Play video">
+                <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>
+            </svg>
+    </span>
+    <video controls>
+        <source type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<router-outlet></router-outlet>

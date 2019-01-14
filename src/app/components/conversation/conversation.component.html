@@ -1,0 +1,11 @@
+<div class="conversation">
+    <div *ngIf="canDisplay" >
+      <div class="utterance" *ngFor="let utterance of conversation">
+          <div [className]="utterance.endOfSequence ? 'col indicator active' : 'col indicator'"><span [className]="'dot ' + utterance.speaker "></span></div>
+          <div class="col comment speaker">{{ utterance.snippet }}</div>
+      </div>
+    </div>
+    <div class="error" *ngIf="!canDisplay" >
+      Sorry, conversation could not be found for this id.
+    </div>
+</div>
