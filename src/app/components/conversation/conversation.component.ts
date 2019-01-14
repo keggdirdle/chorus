@@ -8,12 +8,13 @@ import { IUtterance } from '../../interfaces/utterance';
   templateUrl: './conversation.component.html',
   styleUrls: ['./conversation.component.sass']
 })
+
 export class ConversationComponent implements OnInit {
+
   canDisplay = true;
   conversation: IUtterance[];
-  constructor(private route: ActivatedRoute, private conversationService: ConversationService) { 
-    
-  }
+
+  constructor(private route: ActivatedRoute, private conversationService: ConversationService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.queryParamMap.get("id");

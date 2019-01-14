@@ -7,17 +7,24 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.sass']
 })
+
 export class VideoComponent implements OnInit {
+
   id = this.route.snapshot.queryParamMap.get("id");
+
   constructor(private route: ActivatedRoute, private conversationService: ConversationService) { }
 
   ngOnInit() {
     document.querySelector("video").removeAttribute("controls");
-    //todo the HEAD request doesn't seem to be 100% reliable (restarting the server helped)
+    //todo: the HEAD request doesn't seem to be 100% reliable (COORS and unknown error) (restarting the server helps)
+    //in the meantime, we'll let the video load with some console logging
     this.conversationService.verifyVideo(this.id)
     .subscribe(
       resp => { this._displayVideo(); },
-      err => { console.log("head request was not 200")  }
+      err => { 
+        this._displayVideo(); 
+        console.log("head request was not 200")  
+      }
     );
   }
 
