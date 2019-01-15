@@ -17,17 +17,14 @@ describe('ConversationService', () => {
   });
 
   it('it should display a conversation with a valid ID'), () => {
-    const id: string = "4d79041e-f25f-421d-9e5f-3462459b9934";
+    const id = '4d79041e-f25f-421d-9e5f-3462459b9934';
     const service: ConversationService = TestBed.get(ConversationService);
     service.getConversationById(id)
     .subscribe(
-      resp => { 
-        debugger
+      resp => {
         expect(resp).not.toThrow();
         expect(resp).not.toBeNull();
       },
     );
-
-
-  }
+  };
 });

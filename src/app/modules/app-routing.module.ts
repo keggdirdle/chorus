@@ -6,12 +6,12 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
 
 
 const routes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: VideoComponent,
     children: [
       { path: '', component: ConversationComponent }
-    ] 
+    ]
   },
   { path: '**', component: PageNotFoundComponent},
 ];

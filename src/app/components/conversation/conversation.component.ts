@@ -17,10 +17,11 @@ export class ConversationComponent implements OnInit {
   constructor(private route: ActivatedRoute, private conversationService: ConversationService) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.queryParamMap.get("id");
+    const id = this.route.snapshot.queryParamMap.get('id');
+
     this.conversationService.getConversationById(id)
     .subscribe(
-      resp => { this._setConversationArray(this.conversationService.sortConversationByTime(resp)) },
+      resp => { this._setConversationArray(this.conversationService.sortConversationByTime(resp)); },
       err => { this._showErrorMessage(err); }
     );
   }
